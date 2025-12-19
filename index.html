@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recursive Tech Solution - Expert IAM and Enterprise Security Solutions">
+    <title>Recursive Tech Solution | IAM & Enterprise Security</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #1e3a8a;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3a8a;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .about {
+            background: #f3f4f6;
+        }
+        
+        .expertise {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .expertise-tag {
+            background: #3b82f6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .contact {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .contact h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Recursive Tech Solution</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Enterprise Identity & Access Management Solutions</h1>
+        <p>Secure your organization with expert IAM implementation, governance, and enterprise security solutions</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </section>
+
+    <div class="container" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>🔐 Identity & Access Management</h3>
+                <p>Expert SailPoint IIQ implementation, configuration, and optimization. Complete IAM governance and provisioning solutions tailored to your organization's needs.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🛡️ Enterprise Security</h3>
+                <p>Comprehensive security solutions including RBAC implementation, access control policies, and compliance frameworks to protect your critical assets.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🔌 Application Integration</h3>
+                <p>Seamless application onboarding with webservices, database, and JDBC connectors. Expert integration with cloud platforms and enterprise systems.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>📊 Process Optimization</h3>
+                <p>Streamline access request processes, automate workflows, and optimize IAM operations for improved efficiency and reduced risk.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🏢 Cloud Solutions</h3>
+                <p>Cloud-based IAM implementations on Azure, Google Cloud, and AWS. Modern security architectures for hybrid and cloud-native environments.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>📈 Consulting & Support</h3>
+                <p>Strategic IAM consulting, technical support, and training services. Leverage 6+ years of enterprise IAM experience for your success.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Our Expertise</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+                With extensive experience in enterprise identity and access management, we deliver solutions that secure, streamline, and scale with your organization.
+            </p>
+            <div class="expertise">
+                <span class="expertise-tag">SailPoint IIQ</span>
+                <span class="expertise-tag">IAM Governance</span>
+                <span class="expertise-tag">RBAC</span>
+                <span class="expertise-tag">Access Control</span>
+                <span class="expertise-tag">Cloud Integration</span>
+                <span class="expertise-tag">Application Onboarding</span>
+                <span class="expertise-tag">Webservices</span>
+                <span class="expertise-tag">Database Connectors</span>
+                <span class="expertise-tag">NTLM Authentication</span>
+                <span class="expertise-tag">Enterprise Security</span>
+                <span class="expertise-tag">Process Automation</span>
+                <span class="expertise-tag">Compliance</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Ready to Secure Your Enterprise?</h2>
+        <p>Contact us today to discuss your IAM and security needs</p>
+        <a href="mailto:info@recursivetechsolution.com" class="cta-button">Contact Us</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Recursive Tech Solution. All rights reserved.</p>
+        <p>Expert IAM & Enterprise Security Solutions</p>
+    </footer>
+</body>
+</html>
