@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://recursivetechsolution.com/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://recursivetechsolution.com/services.html</loc>
-    <lastmod>2026-01-21</lastmod>
+    <loc>https://recursivetechsolution.com/careers.html</loc>
+    <lastmod>2026-01-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://recursivetechsolution.com/aboutUs.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.8</priority>
+    <loc>https://recursivetechsolution.com/privacy.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://recursivetechsolution.com/contactusForm.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.8</priority>
+    <loc>https://recursivetechsolution.com/security.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://recursivetechsolution.com/terms.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>
