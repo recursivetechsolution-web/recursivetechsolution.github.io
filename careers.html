@@ -23,7 +23,6 @@
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
 
     <style>
         :root {
@@ -70,19 +69,6 @@
         .form-group label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: #1d1d1f; }
         .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #d2d2d7; font-size: 1rem; font-family: inherit; transition: 0.2s; }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: #0071e3; box-shadow: 0 0 0 4px rgba(0,113,227,0.1); }
-        
-        .file-upload { position: relative; border: 2px dashed #d2d2d7; border-radius: 12px; padding: 30px; text-align: center; transition: 0.3s; cursor: pointer; background: #fafafa; }
-        .file-upload:hover, .file-upload.drag-over { border-color: #0071e3; background: #f0f7ff; }
-        .file-upload input[type="file"] { position: absolute; opacity: 0; width: 100%; height: 100%; top: 0; left: 0; cursor: pointer; }
-        .file-upload-label { color: #1d1d1f; font-weight: 500; }
-        .file-upload-hint { color: #86868b; font-size: 0.85rem; margin-top: 8px; }
-        .file-name { margin-top: 10px; color: #0071e3; font-weight: 600; font-size: 0.9rem; }
-        .file-upload.has-file { border-color: #0071e3; background: #f0f7ff; }
-        
-        .progress-container { display: none; margin-top: 15px; }
-        .progress-bar { width: 100%; height: 6px; background: #e5e5e5; border-radius: 10px; overflow: hidden; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #0071e3, #00a8ff); transition: width 0.3s; border-radius: 10px; }
-        .progress-text { text-align: center; margin-top: 8px; font-size: 0.9rem; color: #0071e3; font-weight: 600; }
         
         .submit-btn { width: 100%; padding: 18px; background: #0071e3; color: #fff; border: none; border-radius: 100px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: 0.3s; margin-top: 10px; }
         .submit-btn:hover { background: #0077ed; transform: scale(1.02); }
@@ -153,21 +139,6 @@
                     <label>Tell us why you're a great fit</label>
                     <textarea id="message" name="message" rows="4" placeholder="Briefly describe your sales background..." required></textarea>
                 </div>
-                <div class="form-group">
-                    <label>Resume/CV (PDF, DOC, DOCX - Max 5MB)</label>
-                    <div class="file-upload" id="file-upload-area">
-                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-                        <div class="file-upload-label">📄 Click to upload or drag & drop</div>
-                        <div class="file-upload-hint">PDF, DOC, or DOCX (max 5MB)</div>
-                        <div class="file-name" id="file-name"></div>
-                    </div>
-                    <div class="progress-container" id="progress-container">
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-fill"></div>
-                        </div>
-                        <div class="progress-text" id="progress-text">0%</div>
-                    </div>
-                </div>
                 <button type="submit" class="submit-btn" id="submit-btn">Submit Application</button>
             </form>
             <div id="form-message"></div>
@@ -196,156 +167,49 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
-        const storage = firebase.storage();
 
         const form = document.getElementById('hiring-form');
         const submitBtn = document.getElementById('submit-btn');
         const formMessage = document.getElementById('form-message');
-        const fileInput = document.getElementById('resume');
-        const fileUploadArea = document.getElementById('file-upload-area');
-        const fileNameDisplay = document.getElementById('file-name');
-
-        // File upload UI handlers
-        fileInput.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const fileSize = (file.size / 1024 / 1024).toFixed(2); // MB
-                fileNameDisplay.textContent = `✓ ${file.name} (${fileSize} MB)`;
-                fileUploadArea.classList.add('has-file');
-            }
-        });
-
-        // Drag and drop handlers
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-            fileUploadArea.addEventListener(eventName, preventDefaults, false);
-        });
-
-        function preventDefaults(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-
-        ['dragenter', 'dragover'].forEach(eventName => {
-            fileUploadArea.addEventListener(eventName, () => {
-                fileUploadArea.classList.add('drag-over');
-            });
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-            fileUploadArea.addEventListener(eventName, () => {
-                fileUploadArea.classList.remove('drag-over');
-            });
-        });
-
-        fileUploadArea.addEventListener('drop', (e) => {
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                fileInput.files = files;
-                fileInput.dispatchEvent(new Event('change'));
-            }
-        });
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             submitBtn.disabled = true;
             submitBtn.innerText = 'Submitting...';
 
-            const file = fileInput.files[0];
-            if (!file) {
-                formMessage.innerText = 'Please attach your resume';
-                formMessage.className = 'error';
-                submitBtn.disabled = false;
-                submitBtn.innerText = 'Submit Application';
-                return;
-            }
-
-            // Check file size (5MB max)
-            if (file.size > 5 * 1024 * 1024) {
-                formMessage.innerText = 'Resume file must be less than 5MB';
-                formMessage.className = 'error';
-                submitBtn.disabled = false;
-                submitBtn.innerText = 'Submit Application';
-                return;
-            }
-
             try {
-                // Show progress bar
-                const progressContainer = document.getElementById('progress-container');
-                const progressFill = document.getElementById('progress-fill');
-                const progressText = document.getElementById('progress-text');
-                progressContainer.style.display = 'block';
-                progressFill.style.width = '30%';
-                progressText.textContent = 'Uploading resume...';
-
                 // Generate unique ID for this application
                 const applicationId = Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-                const resumeFileName = `${applicationId}_${file.name}`;
 
-                // Upload resume to Firebase Storage
-                const storageRef = storage.ref(`resumes/${resumeFileName}`);
-                const uploadTask = storageRef.put(file);
+                // Save application data to Firestore
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    linkedin: document.getElementById('linkedin').value || 'Not provided',
+                    experience: document.getElementById('experience').value,
+                    message: document.getElementById('message').value,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    position: 'Sales Growth Agent',
+                    status: 'new'
+                };
 
-                uploadTask.on('state_changed',
-                    (snapshot) => {
-                        // Progress
-                        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 60;
-                        progressFill.style.width = `${30 + progress}%`;
-                        progressText.textContent = 'Uploading resume...';
-                    },
-                    (error) => {
-                        // Error
-                        console.error('Upload error:', error);
-                        throw error;
-                    },
-                    async () => {
-                        // Success - get download URL
-                        progressFill.style.width = '90%';
-                        progressText.textContent = 'Saving application...';
+                await db.collection('applications').doc(applicationId).set(formData);
 
-                        const downloadURL = await uploadTask.snapshot.ref.getDownloadURL();
+                // Success!
+                formMessage.innerHTML = '✅ <strong>Success!</strong> Your application has been submitted. We\'ll review it and get back to you soon.';
+                formMessage.className = 'success';
 
-                        // Save application data to Firestore
-                        const formData = {
-                            name: document.getElementById('name').value,
-                            email: document.getElementById('email').value,
-                            phone: document.getElementById('phone').value,
-                            linkedin: document.getElementById('linkedin').value || 'Not provided',
-                            experience: document.getElementById('experience').value,
-                            message: document.getElementById('message').value,
-                            resumeFileName: file.name,
-                            resumeURL: downloadURL,
-                            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                            position: 'Sales Growth Agent',
-                            status: 'new'
-                        };
-
-                        await db.collection('applications').doc(applicationId).set(formData);
-
-                        progressFill.style.width = '100%';
-                        progressText.textContent = 'Complete!';
-
-                        // Success!
-                        formMessage.innerHTML = '✅ <strong>Success!</strong> Your application has been submitted. We\'ll review it and get back to you soon.';
-                        formMessage.className = 'success';
-
-                        // Reset form
-                        setTimeout(() => {
-                            form.reset();
-                            progressContainer.style.display = 'none';
-                            progressFill.style.width = '0%';
-                            fileNameDisplay.textContent = '';
-                            fileUploadArea.classList.remove('has-file');
-                        }, 2000);
-                    }
-                );
+                // Reset form
+                setTimeout(() => {
+                    form.reset();
+                }, 2000);
 
             } catch (error) {
                 console.error("Error submitting form:", error);
                 let errorMsg = '❌ <strong>Error:</strong> ';
 
-                if (error.code === 'storage/unauthorized') {
-                    errorMsg += 'Upload failed. Please contact support.';
-                } else if (error.code === 'permission-denied') {
+                if (error.code === 'permission-denied') {
                     errorMsg += 'Permission denied. Please contact support.';
                 } else {
                     errorMsg += 'Something went wrong. Please try again or email us directly at Hr@recursivetechsolution.com';
@@ -353,7 +217,6 @@
 
                 formMessage.innerHTML = errorMsg;
                 formMessage.className = 'error';
-                document.getElementById('progress-container').style.display = 'none';
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerText = 'Submit Application';
