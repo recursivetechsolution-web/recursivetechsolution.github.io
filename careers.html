@@ -10,16 +10,16 @@
     <meta property="og:url" content="https://recursivetechsolution.com/careers.html">
     <meta property="og:title" content="Careers | Recursive Tech Solution">
     <meta property="og:description" content="Join our team as a Sales Growth Agent. Work from anywhere, manage your own schedule, earn high commissions.">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:title" content="Careers | Recursive Tech Solution">
     <meta property="twitter:description" content="Join our team as a Sales Growth Agent. Work from anywhere, manage your own schedule, earn high commissions.">
-    
+
     <title>Careers | Recursive Tech Solution</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    
+
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
@@ -33,13 +33,23 @@
             --text-muted: #94a3b8;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
         header {
             background: rgba(2, 6, 23, 0.8);
             backdrop-filter: blur(12px);
-            padding: 1.2rem 0;
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -47,45 +57,269 @@
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; background: linear-gradient(90deg, #fff, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
-        .nav-links { display: flex; list-style: none; gap: 2rem; }
-        .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
 
-        .hero { padding: 160px 20px 80px; text-align: center; max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: -2px; }
-        .hero p { color: var(--text-muted); font-size: 1.2rem; margin-bottom: 2rem; }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #fff, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            z-index: 1001;
+        }
 
-        .job-section { max-width: 900px; margin: 0 auto 100px; padding: 0 20px; }
-        .job-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 40px; margin-bottom: 40px; }
-        .job-card h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--primary); }
-        .job-card .tag { display: inline-block; padding: 6px 12px; background: rgba(14, 165, 233, 0.1); color: var(--primary); border-radius: 100px; font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; }
-        
-        .apply-container { max-width: 600px; margin: 0 auto; background: #fff; color: #1d1d1f; border-radius: 30px; padding: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-        .apply-container h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 30px; text-align: center; }
-        
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: #1d1d1f; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #d2d2d7; font-size: 1rem; font-family: inherit; transition: 0.2s; }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: #0071e3; box-shadow: 0 0 0 4px rgba(0,113,227,0.1); }
-        
-        .submit-btn { width: 100%; padding: 18px; background: #0071e3; color: #fff; border: none; border-radius: 100px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: 0.3s; margin-top: 10px; }
-        .submit-btn:hover { background: #0077ed; transform: scale(1.02); }
-        .submit-btn:disabled { background: #94a3b8; cursor: not-allowed; }
+        /* Desktop Nav */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-        #form-message { margin-top: 20px; text-align: center; font-weight: 600; }
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--text-main);
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--bg-dark);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.3s ease-in-out;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+            }
+
+            .mobile-menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+            .mobile-menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .mobile-menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -7px);
+            }
+        }
+
+        .hero {
+            padding: 160px 20px 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero { padding: 120px 20px 60px; }
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-section {
+            max-width: 900px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .job-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .job-card { padding: 30px 20px; }
+        }
+
+        .job-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .job-card .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(14, 165, 233, 0.1);
+            color: var(--primary);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .apply-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            color: #1d1d1f;
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .apply-container { padding: 30px 20px; }
+            .apply-container h2 { font-size: 2rem; }
+        }
+
+        .apply-container h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1d1d1f;
+        }
+
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid #d2d2d7;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus, 
+        .form-group select:focus {
+            outline: none;
+            border-color: #0071e3;
+            box-shadow: 0 0 0 4px rgba(0,113,227,0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: #0071e3;
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #0077ed;
+            transform: scale(1.02);
+        }
+
+        .submit-btn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        #form-message {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
         .success { color: #28a745; }
         .error { color: #dc3545; }
 
-        footer { padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: var(--text-muted); }
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <a href="/" class="logo">RECURSIVE</a>
-            <ul class="nav-links">
+            
+            <div class="mobile-menu-btn" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="/#home">Home</a></li>
                 <li><a href="/#services">Services</a></li>
                 <li><a href="/#automation">The Tool</a></li>
@@ -114,18 +348,22 @@
                     <label>Full Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" required>
                 </div>
+
                 <div class="form-group">
                     <label>Email Address</label>
                     <input type="email" id="email" name="email" placeholder="john@example.com" required>
                 </div>
+
                 <div class="form-group">
                     <label>Phone Number</label>
                     <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required>
                 </div>
+
                 <div class="form-group">
                     <label>LinkedIn Profile / Portfolio</label>
                     <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/username">
                 </div>
+
                 <div class="form-group">
                     <label>Sales Experience (Years)</label>
                     <select id="experience" name="experience">
@@ -135,10 +373,12 @@
                         <option value="5+">5+ Years</option>
                     </select>
                 </div>
+
                 <div class="form-group">
                     <label>Tell us why you're a great fit</label>
                     <textarea id="message" name="message" rows="4" placeholder="Briefly describe your sales background..." required></textarea>
                 </div>
+
                 <button type="submit" class="submit-btn" id="submit-btn">Submit Application</button>
             </form>
             <div id="form-message"></div>
@@ -150,10 +390,26 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
         // ============================================
         // Firebase Configuration
         // ============================================
-        
         const firebaseConfig = {
             apiKey: "AIzaSyC2wKSqkBXOOj_eIXtl_HM4w7BvdKz0n8s",
             authDomain: "recursivetech-c1bd9.firebaseapp.com",
@@ -180,7 +436,7 @@
             try {
                 // Generate unique ID for this application
                 const applicationId = Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-
+                
                 // Save application data to Firestore
                 const formData = {
                     name: document.getElementById('name').value,
@@ -199,7 +455,7 @@
                 // Success!
                 formMessage.innerHTML = '✅ <strong>Success!</strong> Your application has been submitted. We\'ll review it and get back to you soon.';
                 formMessage.className = 'success';
-
+                
                 // Reset form
                 setTimeout(() => {
                     form.reset();
@@ -208,13 +464,11 @@
             } catch (error) {
                 console.error("Error submitting form:", error);
                 let errorMsg = '❌ <strong>Error:</strong> ';
-
                 if (error.code === 'permission-denied') {
                     errorMsg += 'Permission denied. Please contact support.';
                 } else {
                     errorMsg += 'Something went wrong. Please try again or email us directly at Hr@recursivetechsolution.com';
                 }
-
                 formMessage.innerHTML = errorMsg;
                 formMessage.className = 'error';
             } finally {
