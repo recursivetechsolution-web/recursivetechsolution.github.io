@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join Recursive Tech Solution - We're hiring sales professionals for commission-based opportunities.">
-    
+    <meta name="description" content="Careers at Recursive Tech Solution - Join our AI experts, sales professionals, and medical specialists. Commission-based opportunities available.">
+    <meta name="keywords" content="careers, jobs, sales, AI, hiring, remote work">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://recursivetechsolution.com/careers.html">
-    <meta property="og:title" content="Careers | Recursive Tech Solution">
-    <meta property="og:description" content="Join our team as a Sales Growth Agent. Work from anywhere, manage your own schedule, earn high commissions.">
+    <meta property="og:title" content="Careers at Recursive Tech Solution">
+    <meta property="og:description" content="Join our team. Sales Growth Agents, AI engineers, and medical specialists wanted. Remote-friendly, commission-based.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:title" content="Careers | Recursive Tech Solution">
-    <meta property="twitter:description" content="Join our team as a Sales Growth Agent. Work from anywhere, manage your own schedule, earn high commissions.">
+    <meta property="twitter:description" content="Careers with Recursive Tech. Join now as a Sales Growth Agent or check open positions.">
 
-    <title>Careers | Recursive Tech Solution</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Careers | Recursive Tech Solution - Join Our Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/chatbot.css">
 
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
@@ -322,9 +325,11 @@
             <ul class="nav-links" id="nav-menu">
                 <li><a href="/#home">Home</a></li>
                 <li><a href="/#services">Services</a></li>
-                <li><a href="/#automation">The Tool</a></li>
-                <li><a href="/careers.html" style="color: var(--primary)">Careers</a></li>
+                <li><a href="/healthcare-solutions.html">Healthcare Solutions</a></li>
+                <li><a href="/#technology">Technology</a></li>
+                <li><a href="/about.html">About</a></li>
                 <li><a href="/#contact">Contact</a></li>
+                <li><a href="/careers.html" style="color: var(--primary);">Careers</a></li>
             </ul>
         </nav>
     </header>
@@ -389,6 +394,19 @@
         <p>&copy; 2026 Recursive Tech Solution. All rights reserved.</p>
     </footer>
 
+    <!-- FLOATING CHATBOT WIDGET -->
+    <div id="chatbot-widget" style="display: none;">
+        <div class="chat-header">
+            <span>Questions About Opportunities?</span>
+            <button id="close-chat">×</button>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Ask anything...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+
     <script>
         // Mobile Menu Toggle
         const mobileToggle = document.getElementById('mobile-toggle');
@@ -406,6 +424,11 @@
                 navMenu.classList.remove('active');
             });
         });
+    </script>
+
+    <!-- Global Scripts: Navigation, Chatbot, Analytics -->
+    <script src="/js/main.js"></script>
+    <script src="/js/chatbot.js"></script>
 
         // ============================================
         // Firebase Configuration

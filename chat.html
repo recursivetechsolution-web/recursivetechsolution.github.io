@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chat with our AI assistant powered by RAG and Groq. Get instant answers about our services, technology, and medical expertise.">
+    <meta name="keywords" content="AI chat, chatbot, RAG, Groq, customer support, AI assistant">
+    <meta name="author" content="Recursive Tech Solution">
+
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://recursivetechsolution.com/chat.html">
+    <meta property="og:title" content="AI Chat Assistant | Recursive Tech Solution">
+    <meta property="og:description" content="Ask our AI anything about our services, technology, or medical team.">
+
+    <title>AI Chat Assistant | Recursive Tech Solution - RAG & Groq Powered</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/chatbot.css">
+
+    <!-- Schema.org - Chat Application -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Recursive AI Chat",
+        "description": "RAG-powered AI chatbot",
+        "url": "https://recursivetechsolution.com/chat.html"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">RECURSIVE</a>
+            <ul class="nav-links">
+                <li><a href="/#home">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/healthcare-solutions.html">Healthcare Solutions</a></li>
+                <li><a href="/#technology">Technology</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/careers.html">Careers</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:+14437412138" class="phone-link">📞</a>
+                <a href="mailto:recursivetechsolution@gmail.com" class="mail-link">✉️</a>
+                <button id="nav-toggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CHAT PAGE HEADER -->
+    <section class="chat-page-header" style="padding-top: 100px;">
+        <h1>AI Chat Assistant</h1>
+        <p>Ask anything about our tech services for healthcare providers. Powered by RAG + Groq.</p>
+    </section>
+
+    <!-- CHAT PAGE MAIN -->
+    <div class="chat-page-main">
+        <!-- Chat Interface -->
+        <div class="chat-interface">
+            <div class="chat-interface-header">
+                <h2>Recursive AI Assistant</h2>
+                <p style="font-size: 0.85rem; opacity: 0.9; margin: 0;">Retrieval-Augmented Generation powered by Groq</p>
+            </div>
+
+            <div class="chat-interface-messages" id="main-chat-messages">
+                <div class="message bot">
+                    <div class="message-bubble">
+                        👋 Welcome! I'm Recursive's AI assistant. I can help with questions about our AI solutions for healthcare practices, website design, pricing, implementation, and more. What can I help you with?
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+
+            <div class="chat-interface-input">
+                <input type="text" id="main-chat-input" placeholder="Ask something... (e.g., 'What is RAG?')" />
+                <button id="main-send-btn">Send</button>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="chat-sidebar">
+            <!-- Quick Topics -->
+            <div class="sidebar-section">
+                <h3>Quick Topics</h3>
+                <div class="quick-topics">
+                    <button class="topic-button" onclick="setQuestion('What is RAG technology?')">What is RAG?</button>
+                    <button class="topic-button" onclick="setQuestion('How much does your chatbot cost?')">Pricing</button>
+                    <button class="topic-button" onclick="setQuestion('What medical specialties do you have?')">Medical Services</button>
+                    <button class="topic-button" onclick="setQuestion('How long does setup take?')">Setup Timeline</button>
+                    <button class="topic-button" onclick="setQuestion('Are you hiring?')">Careers</button>
+                    <button class="topic-button" onclick="setQuestion('How do you protect my data?')">Security</button>
+                </div>
+            </div>
+
+
+            <!-- Contact & Support CTA -->
+            <div class="sidebar-section">
+                <h3>Need Direct Support?</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: var(--space-md);">Our team is here to help with your healthcare tech needs.</p>
+                <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                    <a href="tel:+14437412138" style="background: linear-gradient(135deg, #06b6d4, #22d3ee); color: white; padding: var(--space-md); border-radius: 12px; text-align: center; text-decoration: none; font-weight: 600; display: block;">📞 Call Us</a>
+                    <a href="mailto:recursivetechsolution@gmail.com" style="background: rgba(6, 182, 212, 0.1); color: var(--primary); padding: var(--space-md); border-radius: 12px; text-align: center; text-decoration: none; font-weight: 600; display: block;">✉️ Email</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="margin-top: var(--space-3xl);" role="contentinfo">
+        <div class="footer-content">
+            <a href="/" class="footer-logo">RECURSIVE</a>
+            <div class="footer-links">
+                <a href="/about.html">About</a>
+                <a href="/medical-team.html">Medical Team</a>
+                <a href="/careers.html">Careers</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/security.html">Security</a>
+                <a href="/terms.html">Terms</a>
+            </div>
+            <div class="footer-credit">
+                © 2026 Recursive Tech Solution. Powered by Groq + RAG Technology.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/chatbot.js"></script>
+</body>
+</html>
