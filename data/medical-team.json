@@ -1,0 +1,156 @@
+{
+  "team": [
+    {
+      "id": "dr-james-chen",
+      "name": "Dr. James Chen",
+      "title": "Chief Cardiologist",
+      "specialty": "Cardiology",
+      "credentials": "MD, Board Certified Cardiologist, MBA",
+      "experience": "18+ years",
+      "bio": "Dr. James Chen leads our cardiology division with expertise in interventional cardiology and heart failure management. Previously served at Johns Hopkins Medical Center.",
+      "email": "dr.chen@recursivetechsolution.com",
+      "phone": "+1-443-741-2100",
+      "image": "👨‍⚕️"
+    },
+    {
+      "id": "dr-sarah-williams",
+      "name": "Dr. Sarah Williams",
+      "title": "Director of Mental Health",
+      "specialty": "Psychiatry & Mental Health",
+      "credentials": "MD, Psychiatry, PhD Clinical Psychology",
+      "experience": "15+ years",
+      "bio": "Dr. Sarah Williams specializes in depression, anxiety, and trauma. She developed our AI-assisted mental health protocols and leads clinical research initiatives.",
+      "email": "dr.williams@recursivetechsolution.com",
+      "phone": "+1-443-741-2101",
+      "image": "👩‍⚕️"
+    },
+    {
+      "id": "dr-michael-rodriguez",
+      "name": "Dr. Michael Rodriguez",
+      "title": "Chief Medical Officer",
+      "specialty": "General Practice & Medical Administration",
+      "credentials": "MD, MBA Health Administration",
+      "experience": "20+ years",
+      "bio": "Dr. Michael Rodriguez oversees clinical operations and telemedicine platforms. Expert in scalable medical systems and patient-centered care.",
+      "email": "dr.rodriguez@recursivetechsolution.com",
+      "phone": "+1-443-741-2102",
+      "image": "👨‍⚕️"
+    },
+    {
+      "id": "dr-priya-sharma",
+      "name": "Dr. Priya Sharma",
+      "title": "Oncology Specialist",
+      "specialty": "Oncology & Cancer Treatment",
+      "credentials": "MD, Oncology, Fellowship Dana-Farber",
+      "experience": "14+ years",
+      "bio": "Dr. Priya Sharma leads oncology services with expertise in personalized cancer treatment and clinical trial management.",
+      "email": "dr.sharma@recursivetechsolution.com",
+      "phone": "+1-443-741-2103",
+      "image": "👩‍⚕️"
+    },
+    {
+      "id": "dr-david-kim",
+      "name": "Dr. David Kim",
+      "title": "Head of Preventive Medicine",
+      "specialty": "Preventive Medicine & Wellness",
+      "credentials": "MD, MPH, Board Certified",
+      "experience": "12+ years",
+      "bio": "Dr. David Kim specializes in preventive health care and wellness programs. Leads AI-driven health prediction initiatives.",
+      "email": "dr.kim@recursivetechsolution.com",
+      "phone": "+1-443-741-2104",
+      "image": "👨‍⚕️"
+    },
+    {
+      "id": "nurse-jessica-martinez",
+      "name": "Jessica Martinez",
+      "title": "Head Nurse - Clinical Coordination",
+      "specialty": "Nursing & Patient Care Coordination",
+      "credentials": "RN, MSN, NP Certified",
+      "experience": "16+ years",
+      "bio": "Jessica coordinates clinical care and patient support across all specialties. Expert in telemedicine patient protocols.",
+      "email": "j.martinez@recursivetechsolution.com",
+      "phone": "+1-443-741-2150",
+      "image": "👩‍⚕️"
+    },
+    {
+      "id": "nurse-robert-taylor",
+      "name": "Robert Taylor",
+      "title": "Nurse Specialist - Emergency Care",
+      "specialty": "Emergency Medicine Nursing",
+      "credentials": "RN, CEN (Certified Emergency Nurse)",
+      "experience": "13+ years",
+      "bio": "Robert specializes in emergency triage and critical care coordination. Leads our 24/7 emergency response team.",
+      "email": "r.taylor@recursivetechsolution.com",
+      "phone": "+1-443-741-2151",
+      "image": "👨‍⚕️"
+    },
+    {
+      "id": "nurse-amy-khan",
+      "name": "Amy Khan",
+      "title": "Mental Health Nurse",
+      "specialty": "Psychiatric Nursing & Counseling",
+      "credentials": "RN, BSN, Psychiatric Nursing Specialist",
+      "experience": "10+ years",
+      "bio": "Amy provides mental health support and crisis counseling. Expert in AI-assisted therapeutic protocols.",
+      "email": "a.khan@recursivetechsolution.com",
+      "phone": "+1-443-741-2152",
+      "image": "👩‍⚕️"
+    },
+    {
+      "id": "therapist-lisa-brown",
+      "name": "Dr. Lisa Brown",
+      "title": "Licensed Therapist & Counselor",
+      "specialty": "Psychology & Behavioral Health",
+      "credentials": "PhD Psychology, Licensed Professional Counselor",
+      "experience": "11+ years",
+      "bio": "Dr. Lisa Brown specializes in cognitive behavioral therapy and mental health support. Leads evidence-based intervention programs.",
+      "email": "dr.brown@recursivetechsolution.com",
+      "phone": "+1-443-741-2160",
+      "image": "👩‍⚕️"
+    }
+  ],
+  "specialties": {
+    "cardiology": {
+      "name": "Cardiology",
+      "description": "Heart and cardiovascular health specialists",
+      "image": "❤️",
+      "team_members": ["dr-james-chen"],
+      "services": ["Heart Assessment", "Arrhythmia Management", "Preventive Cardiology", "Telemedicine Consultations"]
+    },
+    "psychiatry": {
+      "name": "Psychiatry & Mental Health",
+      "description": "Mental health and psychological wellness services",
+      "image": "🧠",
+      "team_members": ["dr-sarah-williams", "nurse-amy-khan", "therapist-lisa-brown"],
+      "services": ["Depression Treatment", "Anxiety Management", "Trauma Counseling", "Medication Management", "therapy Sessions"]
+    },
+    "general_practice": {
+      "name": "General Practice",
+      "description": "Primary care and medical administration",
+      "image": "🏥",
+      "team_members": ["dr-michael-rodriguez"],
+      "services": ["Primary Care", "Health Screening", "Preventive Care", "Telemedicine"]
+    },
+    "oncology": {
+      "name": "Oncology",
+      "description": "Cancer treatment and specialization",
+      "image": "🔬",
+      "team_members": ["dr-priya-sharma"],
+      "services": ["Cancer Diagnosis", "Treatment Planning", "Clinical Trials", "Support Groups"]
+    },
+    "preventive_medicine": {
+      "name": "Preventive Medicine",
+      "description": "Wellness and disease prevention programs",
+      "image": "💪",
+      "team_members": ["dr-david-kim"],
+      "services": ["Health Assessments", "Wellness Programs", "Nutrition Counseling", "Lifestyle Management"]
+    },
+    "nursing": {
+      "name": "Nursing & Patient Care",
+      "description": "Clinical nursing and patient support services",
+      "image": "👩‍⚕️",
+      "team_members": ["nurse-jessica-martinez", "nurse-robert-taylor", "nurse-amy-khan"],
+      "services": ["Patient Care Coordination", "Emergency Response", "Clinical Support", "24/7 Nursing"]
+    }
+  }
+}

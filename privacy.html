@@ -2,28 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy - Recursive Tech Solution explains how we handle and protect your data.">
   <title>Privacy Policy — Recursive Tech Solution</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
   <style>
-    :root{--bg:#fafbfc;--muted:#64748b;--accent:#0ea5e9;--dark:#0f172a}
-    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--dark); margin:0;}
-    .wrap{max-width:900px;margin:48px auto;padding:24px;background:#fff;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.06)}
-    h1{margin:0 0 12px;font-weight:700}
-    p{color:var(--muted);line-height:1.6}
-    .brand{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-    a.cta{display:inline-block;margin-top:18px;background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none}
-    footer{max-width:900px;margin:24px auto;text-align:center;color:var(--muted);font-size:0.95rem}
+    body { padding-top: 80px; }
+    .legal-container { max-width: 900px; margin: 60px auto; padding: 40px 20px; }
+    .legal-container h1 { font-family: var(--font-serif); color: var(--text-main); margin-bottom: 30px; }
+    .legal-container p { color: var(--text-light); line-height: 1.8; margin-bottom: 20px; }
+    .legal-container a { color: var(--primary); text-decoration: none; }
+    .legal-container a:hover { text-decoration: underline; }
+    .back-link { display: inline-block; margin-bottom: 30px; color: var(--primary); text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="brand"><strong>Recursive Tech Solution</strong></div>
+  <header>
+    <nav>
+      <a href="/" class="logo">RECURSIVE</a>
+      <ul class="nav-links">
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/healthcare-solutions.html">Healthcare Solutions</a></li>
+        <li><a href="/#technology">Technology</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="tel:+14437412138" class="phone-link">📞</a>
+        <a href="mailto:recursivetechsolution@gmail.com" class="mail-link">✉️</a>
+        <button id="nav-toggle">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="legal-container">
+    <a href="/" class="back-link">← Back to Home</a>
     <h1>Privacy Policy</h1>
     <p>Recursive Tech Solution acts as a Data Processor. The Client is the Data Controller and owner of all message data. We use enterprise-grade AI APIs with Zero-Retention policies, meaning your data is never used to train public models. All communication data from WhatsApp, Instagram, and other platforms is encrypted and processed only to deliver services.</p>
     <p>This page summarizes our privacy practices. For specific contractual terms, please contact us at <a href="mailto:recursivetechsolution@gmail.com">recursivetechsolution@gmail.com</a>.</p>
-    <a class="cta" href="/">Back to site</a>
+    <h2 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">Data Protection</h2>
+    <p>We use 256-bit AES encryption for all stored data and TLS 1.3 for data in transit. Your data is never shared with third parties without explicit consent.</p>
   </div>
-  <footer>&copy; 2026 Recursive Tech Solution</footer>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <a href="/" class="footer-logo">RECURSIVE</a>
+      <div class="footer-links">
+        <a href="/about.html">About</a>
+        <a href="/careers.html">Careers</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/security.html">Security</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+      <div class="footer-credit">© 2026 Recursive Tech Solution.</div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CHATBOT WIDGET -->
+  <div id="chatbot-widget" style="display: none;">
+    <div class="chat-header">
+      <span>Recursive AI Assistant</span>
+      <button id="close-chat">×</button>
+    </div>
+    <div id="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="chat-input" placeholder="Ask about our services...">
+      <button id="send-chat">Send</button>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/chatbot.js"></script>
+  <link rel="stylesheet" href="/css/chatbot.css">
 </body>
 </html>

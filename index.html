@@ -3,296 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recursive Tech Solution - High-end AI Automation, Web Dev, and Digital Growth">
-    <meta name="keywords" content="AI automation, web development, digital marketing, AI agents, business automation, WhatsApp automation">
+    <meta name="description" content="Recursive Tech Solution - Billion-dollar AI automation, website builder, and autonomous agents for enterprises. Transform your business with advanced AI technology.">
+    <meta name="keywords" content="AI automation, autonomous agents, website builder, AI chatbot, RAG technology, medical AI, enterprise AI, business automation, AI technology solutions">
     <meta name="author" content="Recursive Tech Solution">
-    
+    <meta name="theme-color" content="#06b6d4">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://recursivetechsolution.com/">
-    <meta property="og:title" content="Recursive Tech | Modern AI & Tech Agency">
-    <meta property="og:description" content="Elite digital experiences and autonomous AI agents that handle your sales, marketing, and operations while you sleep.">
-    <meta property="og:image" content="https://recursivetechsolution.com/og-image.jpg">
-    
+    <meta property="og:title" content="Recursive Tech | Billion-Dollar AI Automation & Technology">
+    <meta property="og:description" content="Enterprise-grade AI solutions, autonomous agents, and website builder. Trusted by enterprises for medical AI, business automation, and digital transformation.">
+    <meta property="og:site_name" content="Recursive Tech Solution">
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://recursivetechsolution.com/">
-    <meta property="twitter:title" content="Recursive Tech | Modern AI & Tech Agency">
-    <meta property="twitter:description" content="Elite digital experiences and autonomous AI agents that handle your sales, marketing, and operations while you sleep.">
-    <meta property="twitter:image" content="https://recursivetechsolution.com/og-image.jpg">
-    
-    <title>Recursive Tech | Modern AI & Tech Agency</title>
-    
+    <meta property="twitter:title" content="Recursive Tech | Billion-Dollar AI Automation">
+    <meta property="twitter:description" content="Enterprise AI solutions for medical, business automation, and digital growth.">
+
+    <!-- Schema.org - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Recursive Tech Solution",
+        "url": "https://recursivetechsolution.com",
+        "logo": "https://recursivetechsolution.com/favicon.svg",
+        "description": "Enterprise AI automation and website builder",
+        "sameAs": ["https://linkedin.com/company/recursive-tech-solution"],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-443-741-2138",
+            "contactType": "Sales"
+        }
+    }
+    </script>
+
+    <title>Recursive Tech | Billion-Dollar AI Automation & Technology Solutions</title>
+
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4Z33RTYZY"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-S4Z33RTYZY'); // Replace with your actual Google Analytics ID
+      gtag('config', 'G-S4Z33RTYZY');
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
-        :root {
-            --primary: #0ea5e9;
-            --bg-dark: #020617;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
-        
-        /* Premium Header */
-        header { 
-            background: rgba(2, 6, 23, 0.8); 
-            backdrop-filter: blur(12px); 
-            padding: 1.2rem 0; 
-            position: fixed; 
-            width: 100%; 
-            top: 0; 
-            z-index: 1000; 
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        nav { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:0 auto; padding:0 20px; }
-        .logo { font-size:1.4rem; font-weight:800; letter-spacing: -0.5px; background: linear-gradient(90deg, #fff, var(--primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-        .nav-links { display:flex; list-style:none; gap:2rem; }
-        .nav-links a { color: var(--text-main); text-decoration:none; font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
-        .nav-actions { display:flex; align-items:center; gap:0.5rem; }
-        .nav-actions .phone-link, .nav-actions .mail-link { min-width:44px; min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px; }
-        .phone-link { color: var(--text-main); background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px; font-weight: 700; text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
-        .phone-link:hover { background: var(--primary); color: #001; }
-        .mail-link { color: var(--text-main); background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 8px 10px; border-radius: 8px; font-weight: 700; text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
-        .mail-link:hover { background: rgba(255,255,255,0.06); color: var(--primary); }
-        .phone-icon, .mail-icon { padding: 10px; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; }
-        .phone-icon svg, .mail-icon svg { display: block; }
-        .cta-secondary.phone-icon { padding: 10px 12px; }
-        .nav-actions { order: 2; z-index: 1001; }
-        #nav-toggle { order: 3; }
-        .logo { order: 1; }
+        .btn-label { display: none; }
         @media (max-width: 768px) {
-            .phone-link { margin-left: 0; }
-            .mail-link { margin-left: 0; }
-            .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(2,6,23,0.98); border-radius: 0 0 10px 10px; padding: 1rem 20px; flex-direction: column; gap: 1rem; width: auto; z-index: 999; }
-            #nav-toggle { display: block; background: none; border: none; color: var(--text-main); font-size: 1.6rem; }
-            .nav-links.open { display: flex; }
-        }
-
-        /* Million Dollar Hero */
-        .hero { 
-            padding: 180px 20px 100px; 
-            text-align: center; 
-            background: radial-gradient(circle at top center, rgba(14, 165, 233, 0.15), transparent);
-        }
-        .hero h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -2px; }
-        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2.5rem; }
-.cta-group { display: flex; gap: 1rem; justify-content: center; align-items:center; flex-wrap:wrap; }
-            .cta-button { background: var(--primary); color: white; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; display:inline-flex; align-items:center; gap:10px; }
-            .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4); }
-            .cta-secondary { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 10px 14px; border-radius: 10px; text-decoration: none; font-weight: 600; display:inline-flex; align-items:center; gap:10px; }
-            .btn-label { display: none; }
-            @media (max-width: 768px) {
-                .cta-group { flex-direction: column; gap: 0.8rem; }
-                .cta-button, .cta-secondary { width: 100%; box-sizing: border-box; padding: 14px 18px; }
-                .cta-button { justify-content: center; }
-                .btn-label { display: inline-block; }
-            }
-
-        /* Concise Services Section */
-        .container { max-width: 1200px; margin: 0 auto; padding: 100px 20px; }
-        .section-tag { color: var(--primary); text-transform: uppercase; font-weight: 800; font-size: 0.8rem; letter-spacing: 2px; display: block; text-align: center; margin-bottom: 1rem; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 4rem; font-weight: 800; }
-        
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .service-card { 
-            background: var(--card-bg); 
-            border: 1px solid rgba(255,255,255,0.05); 
-            padding: 3rem 2rem; 
-            border-radius: 24px; 
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .service-card:hover { background: rgba(255,255,255,0.06); border-color: var(--primary); transform: translateY(-10px); }
-        .service-icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
-        .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
-        .service-card p { color: var(--text-muted); font-size: 1rem; }
-
-        /* Unified Tool Preview Section */
-        .tool-preview { background: rgba(14, 165, 233, 0.03); border-radius: 40px; padding: 60px; border: 1px solid rgba(255,255,255,0.05); margin-top: 50px; }
-        
-        /* Footer/Legal */
-        footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 20px; text-align: center; }
-
-        /* Trusted clients banner */
-        .trusted-banner { max-width: 1100px; margin: 0 auto 1.5rem; overflow: hidden; padding: 1rem 0; }
-        .trusted-track { display: flex; gap: 1.25rem; align-items: center; width: max-content; }
-        .trusted-track .client { display: inline-flex; align-items:center; justify-content:center; min-width:64px; min-height:64px; border-radius:12px; background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.03); color: var(--text-main); font-weight:700; font-size:0.9rem; padding: 10px; }
-        .trusted-scroll { display:flex; gap: 1.25rem; animation: scroll-left 28s linear infinite; }
-        .trusted-banner:hover .trusted-scroll { animation-play-state: paused; }
-        @keyframes scroll-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        @media (prefers-reduced-motion: reduce) { .trusted-scroll { animation: none; } }
-
-        .footer-links { display: flex; gap: 2rem; justify-content: center; margin: 2rem 0; }
-        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
-        @media (max-width: 480px) { .footer-links { gap: 1rem; } }
-
-        #nav-toggle { display: none; }
-        
-        @media (max-width: 768px) {
-            .hero { padding: 120px 16px 60px; }
-            .hero h1 { font-size: 2.2rem; }
-            .nav-links { display: none; position: absolute; top: 64px; right: 20px; background: rgba(2,6,23,0.95); border-radius: 10px; padding: 1rem; flex-direction: column; gap: 1rem; width: 220px; }
-            #nav-toggle { display: block; background: none; border: none; color: var(--text-main); font-size: 1.6rem; }
-            .nav-links.open { display: flex; }
-            .cta-group { flex-direction: column; gap: 0.8rem; }
-            .cta-button, .cta-secondary { width: 100%; box-sizing: border-box; }
-            .container { padding: 60px 16px; }
-            .service-card { padding: 2rem; }
-            .tool-preview { padding: 30px; }
-            .services-grid { grid-template-columns: 1fr; }
+            .btn-label { display: inline-block; }
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">RECURSIVE</div>
+            <a href="/" class="logo">RECURSIVE</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="/healthcare-solutions.html">Healthcare Solutions</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/careers.html" style="color: var(--primary-light);">Careers</a></li>
+                <li><a href="/chat.html">AI Chat</a></li>
+            </ul>
             <div class="nav-actions">
                 <a href="tel:+14437412138" class="phone-link" aria-label="Call us">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.06.89.28 1.76.64 2.56a2 2 0 0 1-.45 2.11L9.91 10.91a16 16 0 0 0 6.18 6.18l1.52-1.52a2 2 0 0 1 2.11-.45c.8.36 1.67.58 2.56.64A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <a href="mailto:recursivetechsolution@gmail.com?subject=Request%20a%20Quote%20from%20Website&body=Hi%20Recursive%20team%2C%0D%0A%0D%0AI%27m%20interested%20in%20your%20services%20and%20would%20like%20a%20quote.%0D%0A%0D%0AService%2FUse%20case%3A%20%5Be.g.%2C%20Website%2C%20Automation%2C%20AI%20Agents%5D%0D%0ACompany%3A%0D%0AApprox.%20budget%20%26%20timeline%3A%0D%0A%0D%0AThanks%2C%0D%0A%5BYour%20name%5D" class="mail-link" aria-label="Request a quote">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <a href="mailto:recursivetechsolution@gmail.com?subject=Request%20a%20Quote%20from%20Website" class="mail-link" aria-label="Request a quote">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/>
                         <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
                 <button id="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#automation">The Tool</a></li>
-                <li><a href="/careers.html">Careers</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <h1>Exponential Growth <br><span style="color: var(--primary);">Fueled by AI.</span></h1>
-        <p>We build elite digital experiences and autonomous AI agents that handle your sales, marketing, and operations while you sleep.</p>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home" role="region" aria-label="Hero section">
+        <h1>Billion-Dollar AI <span>Automation</span> at Enterprise Scale</h1>
+        <p>Autonomous agents, intelligent chatbots, and medical AI solutions that transform how enterprises work. Enterprise-grade technology, luxury team experience.</p>
         <div class="cta-group">
-            <a href="mailto:recursivetechsolution@gmail.com?subject=Request%20a%20Quote%20from%20Website&body=Hi%20Recursive%20team%2C%0D%0A%0D%0AI%27m%20interested%20in%20your%20services%20and%20would%20like%20a%20quote.%0D%0A%0D%0AService%2FUse%20case%3A%20%5Be.g.%2C%20Website%2C%20Automation%2C%20AI%20Agents%5D%0D%0ACompany%3A%0D%0AApprox.%20budget%20%26%20timeline%3A%0D%0A%0D%0AThanks%2C%0D%0A%5BYour%20name%5D" class="cta-button">Get a Quote</a>
-            <a href="tel:+14437412138" class="cta-secondary" aria-label="Call us">Let's Talk</a>
+            <a href="mailto:recursivetechsolution@gmail.com?subject=Enterprise%20AI%20Solution%20Inquiry" class="cta-button">Get Started</a>
+            <a href="/chat.html" class="cta-secondary">Chat with AI</a>
         </div>
     </section>
 
-    <div class="container" id="services">
-        <span class="section-tag">Solutions</span>
+    <!-- TRUST & AUTHORITY SECTION -->
+    <section class="container" style="padding: 80px var(--space-xl); position: relative;">
+        <div class="trusted-label">TRUSTED BY ENTERPRISES</div>
+        <div class="trusted-banner" aria-label="Trusted by enterprises across industries">
+            <div class="trusted-scroll" role="list" aria-hidden="false">
+                <div class="trusted-track" role="listitem">
+                    <div class="client">🏥 Healthcare</div>
+                    <div class="client">🚀 Enterprise SaaS</div>
+                    <div class="client">🏢 Fortune 500</div>
+                    <div class="client">🌐 E-commerce</div>
+                    <div class="client">💼 Tech Companies</div>
+                    <div class="client">📚 Education</div>
+                    <div class="client">💳 FinTech</div>
+                    <div class="client">🎨 Agencies</div>
+                </div>
+                <div class="trusted-track" role="listitem">
+                    <div class="client">🏥 Healthcare</div>
+                    <div class="client">🚀 Enterprise SaaS</div>
+                    <div class="client">🏢 Fortune 500</div>
+                    <div class="client">🌐 E-commerce</div>
+                    <div class="client">💼 Tech Companies</div>
+                    <div class="client">📚 Education</div>
+                    <div class="client">💳 FinTech</div>
+                    <div class="client">🎨 Agencies</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="container" id="services" role="region" aria-label="Our services">
+        <span class="section-tag">Enterprise Solutions</span>
         <h2 class="section-title">Our Expertise</h2>
         <div class="services-grid">
             <div class="service-card">
                 <span class="service-icon">🌐</span>
-                <h3>High-Conversion Web</h3>
-                <p>Custom-built websites and E-commerce stores optimized for 2025 speed standards and SEO dominance.</p>
+                <h3>Enterprise Websites</h3>
+                <p>Custom-built luxury websites optimized for conversion, SEO, and 2025 enterprise standards. Premium design meets performance.</p>
             </div>
-            <div class="service-card" style="border: 1px solid var(--primary);">
-                <span class="service-icon">📥</span>
-                <h3>Unified AI Inbox</h3>
-                <p>One dashboard for WhatsApp, Insta, Messenger, and Email. Powered by Perplexity AI for instant, smart replies.</p>
+            <div class="service-card featured">
+                <span class="service-icon">🤖</span>
+                <h3>AI Chatbots (RAG)</h3>
+                <p>Retrieval-Augmented Generation chatbots with Groq API integration. Answer customer questions instantly with 99.9% accuracy using your knowledge base.</p>
             </div>
             <div class="service-card">
-                <span class="service-icon">🤖</span>
-                <h3>Autonomous Workflows</h3>
-                <p>Replace repetitive tasks with AI Agents. Automated lead scoring, CRM management, and 24/7 customer support.</p>
+                <span class="service-icon">⚙️</span>
+                <h3>Autonomous Agents</h3>
+                <p>AI agents that work 24/7. From lead scoring to CRM management to customer support automation. Replace manual work with intelligent automation.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🏥</span>
+                <h3>Medical AI Solutions</h3>
+                <p>HIPAA-compliant AI systems for healthcare. Team management, patient communication, appointment scheduling, and medical records processing.</p>
             </div>
             <div class="service-card">
                 <span class="service-icon">📈</span>
                 <h3>Growth Engineering</h3>
-                <p>AI-driven SEO and social media automation that keeps your brand relevant across every platform, every day.</p>
+                <p>AI-driven strategies for organic growth. SEO optimization, content strategy, conversion rate optimization, and data-driven scaling.</p>
             </div>
+            <div class="service-card">
+                <span class="service-icon">🔐</span>
+                <h3>Enterprise Security</h3>
+                <p>256-bit encryption, SOC 2 compliance, HIPAA ready. Your data is yours alone. Zero retention policies with premium infrastructure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY SECTION -->
+    <section class="container" id="technology" role="region" aria-label="Technology platform">
+        <span class="section-tag">Intelligent Platform</span>
+        <h2 class="section-title">The Recursive Command Center</h2>
+        <div class="tool-preview">
+            <p>Our proprietary AI platform consolidates all your business communication into one intelligent interface. Powered by advanced RAG (Retrieval-Augmented Generation) with Groq API integration.</p>
+            <div class="features-grid">
+                <div class="feature-item">WhatsApp, Instagram & Facebook integrations</div>
+                <div class="feature-item">Real-time AI responses powered by Groq</div>
+                <div class="feature-item">Retrieval-Augmented Generation (RAG) engine</div>
+                <div class="feature-item">Custom knowledge base connectors</div>
+                <div class="feature-item">AI-powered lead scoring & qualification</div>
+                <div class="feature-item">Enterprise-grade 256-bit encryption</div>
+                <div class="feature-item">HIPAA & SOC 2 compliance ready</div>
+                <div class="feature-item">99.9% uptime SLA guarantee</div>
+            </div>
+            <p style="margin-top: var(--space-2xl); color: var(--text-muted);">Live RAG responses return answers with source citations so your agents act on verified, current information. Fallback to Groq API for novel questions.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA SECTION -->
+    <section class="container" id="contact" style="text-align: center; padding: 120px var(--space-xl);" role="region" aria-label="Contact and call to action">
+        <h2 style="font-family: var(--font-serif); font-size: 3rem; margin-bottom: var(--space-lg);">Ready to Transform Your Business?</h2>
+        <p style="color: var(--text-muted); margin-bottom: var(--space-3xl); font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Let's build enterprise-grade AI solutions tailored to your industry. Medical, SaaS, E-commerce, or custom—we've got you covered.</p>
+        <div class="cta-group">
+            <a href="mailto:recursivetechsolution@gmail.com?subject=Enterprise%20AI%20Solution%20Inquiry" class="cta-button">Request Quote</a>
+            <a href="tel:+14437412138" class="cta-secondary">Call +1 (443) 741-2138</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <a href="/" class="footer-logo">RECURSIVE</a>
+            <p style="color: var(--text-muted); margin-bottom: var(--space-2xl); max-width: 600px; margin-left: auto; margin-right: auto;">Enterprise AI solutions for the Fortune 500. Trusted by healthcare, SaaS, and e-commerce leaders.</p>
+
+            <div class="footer-links">
+                <a href="/about.html">About</a>
+                <a href="/healthcare-solutions.html">Healthcare Solutions</a>
+                <a href="/chat.html">AI Chat</a>
+                <a href="/careers.html">Careers</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/security.html">Security</a>
+                <a href="/terms.html">Terms</a>
+            </div>
+
+            <div class="footer-credit">
+                © 2026 Recursive Tech Solution. Enterprise AI for the future. | <a href="mailto:recursivetechsolution@gmail.com" style="color: var(--primary);">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING AI CHATBOT WIDGET (hidden by default, controlled by JS) -->
+    <div id="chatbot-widget" style="display: none;">
+        <div class="chat-header">
+            <span>Need Website Help?</span>
+            <button id="close-chat">×</button>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Ask anything...">
+            <button id="send-chat">Send</button>
         </div>
     </div>
 
-    <section class="container" id="automation" style="padding-top: 0;">
-        <div class="tool-preview">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">The Recursive Command Center</h2>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">Our proprietary tool that consolidates your business communication into a single, AI-managed interface.</p>
-            <div style="color: var(--text-muted); display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; align-items: start;">
-                <div>✓ WhatsApp, Instagram & Facebook integrations</div>
-                <div>✓ Real-time web search & live citations (Perplexity-powered)</div>
-                <div>✓ Auto-summarization, highlights & suggested actions</div>
-                <div>✓ Custom knowledge connectors (CRM, Docs, Sheets)</div>
-                <div>✓ One-click automations & workflow triggers</div>
-                <div>✓ Enterprise-grade 256-bit encryption + privacy controls</div>
-            </div>
-            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.95rem;">Live web search returns concise answers with source links and timestamps so your agents can act on verified, current information.</p>
-        </div>
-    </section>
-
-    <section class="contact" id="contact" style="text-align: center; padding: 100px 20px;">
-        <h2 style="font-size: 3rem; margin-bottom: 1rem;">Ready to scale?</h2>
-        <p style="color: var(--text-muted); margin-bottom: 3rem;">Let’s build the future of your business together.</p>
-        <a href="mailto:recursivetechsolution@gmail.com?subject=Request%20a%20Quote%20from%20Website&body=Hi%20Recursive%20team%2C%0D%0A%0D%0AI%27m%20interested%20in%20your%20services%20and%20would%20like%20a%20quote.%0D%0A%0D%0AService%2FUse%20case%3A%20%5Be.g.%2C%20Website%2C%20Automation%2C%20AI%20Agents%5D%0D%0ACompany%3A%0D%0AApprox.%20budget%20%26%20timeline%3A%0D%0A%0D%0AThanks%2C%0D%0A%5BYour%20name%5D" class="cta-button" aria-label="Request a quote via email">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/>
-                <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="btn-label">Request a quote</span>
-        </a>
-        <a href="tel:+14437412138" class="cta-secondary phone-icon" aria-label="Call us">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.06.89.28 1.76.64 2.56a2 2 0 0 1-.45 2.11L9.91 10.91a16 16 0 0 0 6.18 6.18l1.52-1.52a2 2 0 0 1 2.11-.45c.8.36 1.67.58 2.56.64A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="btn-label">Call</span>
-        </a>
-    </section>
-
-    <footer>
-        <div class="logo" style="margin-bottom: 1rem;">RECURSIVE</div>
-
-        <!-- Trusted clients banner (auto-scrolling) -->
-        <div class="trusted-banner" aria-label="Trusted by small businesses">
-            <div class="trusted-scroll" role="list" aria-hidden="false">
-                <div class="trusted-track" role="listitem">
-                    <div class="client" title="E‑commerce">⚡ E‑commerce</div>
-                    <div class="client" title="SaaS">🌐 SaaS</div>
-                    <div class="client" title="Retail">🛒 Retail</div>
-                    <div class="client" title="Healthcare">🏥 Health</div>
-                    <div class="client" title="Education">📚 Education</div>
-                    <div class="client" title="Local Business">🏠 Local Shops</div>
-                    <div class="client" title="Creative Agencies">🎨 Agencies</div>
-                    <div class="client" title="FinTech">💳 FinTech</div>
-                </div>
-                <!-- duplicate for seamless scroll -->
-                <div class="trusted-track" role="listitem">
-                    <div class="client" title="E‑commerce">⚡ E‑commerce</div>
-                    <div class="client" title="SaaS">🌐 SaaS</div>
-                    <div class="client" title="Retail">🛒 Retail</div>
-                    <div class="client" title="Healthcare">🏥 Health</div>
-                    <div class="client" title="Education">📚 Education</div>
-                    <div class="client" title="Local Business">🏠 Local Shops</div>
-                    <div class="client" title="Creative Agencies">🎨 Agencies</div>
-                    <div class="client" title="FinTech">💳 FinTech</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-links">
-            <a href="privacy.html">Privacy</a>
-            <a href="security.html">Security</a>
-            <a href="terms.html">Terms</a>
-        </div>
-        <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 Recursive Tech Solution. Built for the future.</p>
-    </footer>
-
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
     <script>
         // Smooth scrolling for internal anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

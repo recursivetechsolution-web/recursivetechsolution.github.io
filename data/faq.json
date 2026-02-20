@@ -1,0 +1,143 @@
+{
+  "company": {
+    "name": "Recursive Tech Solution",
+    "tagline": "Tech Solutions For Healthcare Providers",
+    "phone": "+1 (443) 741-2138",
+    "email": "recursivetechsolution@gmail.com",
+    "location": "Enterprise Headquarters",
+    "founded": 2024
+  },
+  "faqs": [
+    {
+      "id": "what-is-recursive",
+      "question": "What is Recursive Tech Solution?",
+      "answer": "Recursive Tech Solution is your outsourced tech team for medical practices. We build HIPAA-compliant websites, AI chatbots for appointment booking, patient portals, and practice management solutions for doctors, psychiatrists, therapists, and medical clinics. We handle your digital infrastructure so you can focus on patient care.",
+      "category": "General",
+      "keywords": ["company", "about", "what", "medical practice", "healthcare"]
+    },
+    {
+      "id": "doctor-website",
+      "question": "What type of websites do you build for doctors?",
+      "answer": "We specialize in professional medical websites optimized for patient acquisition and conversion. Features include: HIPAA-compliant design, online appointment booking, patient intake forms, service descriptions by specialty, insurance information, team profiles, SEO optimization for local searches like 'psychiatrist near me', and integrated AI chatbots. All fully mobile-responsive.",
+      "category": "Services",
+      "keywords": ["website", "doctor", "design", "medical practice", "physician"]
+    },
+    {
+      "id": "appointment-chatbot",
+      "question": "How does your AI chatbot help medical practices?",
+      "answer": "Our AI chatbot handles 24/7 patient inquiries and appointment scheduling. It answers FAQs specific to your practice (hours, insurance, services offered), collects patient intake information, books appointments directly to your calendar, and routes urgent issues to staff. Reduces no-shows by 60% and phone call volume significantly. HIPAA-compliant.",
+      "category": "Healthcare Services",
+      "keywords": ["chatbot", "appointment", "scheduling", "patient intake", "automation"]
+    },
+    {
+      "id": "patient-portal",
+      "question": "What is a patient portal and why do practices need it?",
+      "answer": "A patient portal is a secure online space where patients can: view medical records, request prescriptions, schedule appointments, pay bills, message their doctor, and access lab results. It improves patient satisfaction, reduces staff workload, and demonstrates modern care. We build HIPAA-compliant portals integrated with major EHR systems.",
+      "category": "Healthcare Services",
+      "keywords": ["patient portal", "medical records", "HIPAA", "security"]
+    },
+    {
+      "id": "ehr-integration",
+      "question": "Do you integrate with EHR systems like Epic or Athena?",
+      "answer": "Yes! We integrate with: Epic, Athena Health, SimplePractice, Greenway, NextGen, and many others. We can also implement custom API integrations. Patient data flows directly from your intake forms to your medical records system, eliminating manual data entry and reducing errors.",
+      "category": "Integration",
+      "keywords": ["EHR", "integration", "Epic", "Athena", "SimplePractice", "medical records"]
+    },
+    {
+      "id": "medical-seo",
+      "question": "How can we be found by patients on Google?",
+      "answer": "We specialize in medical practice SEO. We optimize your website for local searches like 'psychiatrist in [city]', 'OBGYN near me', 'therapist accepting new patients', etc. Strategy includes: Google My Business optimization, local citations, keyword research for your specialty, content optimization, and reputation management. Target: Google top 3 results in 90 days.",
+      "category": "Services",
+      "keywords": ["SEO", "Google", "local search", "patient acquisition", "marketing"]
+    },
+    {
+      "id": "hipaa-compliance",
+      "question": "Are your solutions HIPAA compliant?",
+      "answer": "Yes, all our solutions are HIPAA-compliant by design. We use 256-bit AES encryption, secure data transmission (TLS 1.3), and zero-knowledge architecture. Your patient data is never used for AI training, never shared with third parties, and fully protected. We sign Business Associate Agreements (BAA) with all healthcare clients.",
+      "category": "Security",
+      "keywords": ["HIPAA", "compliance", "security", "encryption", "patient data"]
+    },
+    {
+      "id": "pricing-healthcare",
+      "question": "What does healthcare tech cost?",
+      "answer": "Custom pricing based on your practice size and services. Website starting at $2,500 (one-time) + $200/month hosting. AI chatbot starting at $1,500/month. Patient portal starting at $2,000/month. EHR integration: custom pricing based on complexity. Contact us for a detailed quote tailored to your practice.",
+      "category": "Sales",
+      "keywords": ["price", "cost", "plans", "budget", "pricing"]
+    },
+    {
+      "id": "setup-timeline-practice",
+      "question": "How quickly can we launch our practice website and chatbot?",
+      "answer": "Website design & launch: 2-3 weeks. AI chatbot setup: 3-5 days. Patient portal: 2-4 weeks (depending on EHR integration). We provide dedicated onboarding, staff training, and handoff documentation. Most practices are live within a month for core services.",
+      "category": "Implementation",
+      "keywords": ["setup", "timeline", "implementation", "deployment", "launch"]
+    },
+    {
+      "id": "request-healthcare-quote",
+      "question": "How do I get a quote for my medical practice?",
+      "answer": "Call us at +1 (443) 741-2138 or email recursivetechsolution@gmail.com with details about your practice (specialty, size, current systems). Our healthcare specialist will understand your needs and provide a custom proposal within 24 hours. We offer free consultations.",
+      "category": "Sales",
+      "keywords": ["quote", "pricing", "contact", "sales", "demo"]
+    },
+    {
+      "id": "telemedicine",
+      "question": "Do you set up telemedicine for practices?",
+      "answer": "Yes! We integrate white-label telemedicine platforms with your practice website. Features include: secure video consultations, patient scheduling, prescription issuing within the platform, HIPAA-compliant messaging, and integration with your EHR. We support major platforms like Doxy.me, Zoom for Healthcare, and custom solutions.",
+      "category": "Healthcare Services",
+      "keywords": ["telemedicine", "video", "remote consultation", "virtual visit"]
+    },
+    {
+      "id": "rag-chatbot-tech",
+      "question": "What is RAG and why is it important for our chatbot?",
+      "answer": "RAG (Retrieval-Augmented Generation) means our chatbot first searches your practice knowledge base (hours, services, insurance info, FAQs). If found, it returns accurate answers. For novel questions, it uses AI. This prevents hallucinations and ensures patients get correct information about your practice 24/7.",
+      "category": "Technology",
+      "keywords": ["RAG", "chatbot", "knowledge base", "AI", "accurate"]
+    },
+    {
+      "id": "why-groq",
+      "question": "Why use Groq API for healthcare AI?",
+      "answer": "Groq offers the best combination of speed, cost, and reliability for healthcare applications. 99.9% uptime, low latency responses, and exceptional model quality (Mixtral 8x7B). For patient-facing applications, speed matters—fast responses create better patient experience. Cost is 10x lower than OpenAI, enabling affordable scaling.",
+      "category": "Technology",
+      "keywords": ["Groq", "API", "cost", "performance", "speed"]
+    },
+    {
+      "id": "support-healthcare",
+      "question": "What support do you provide?",
+      "answer": "24/7 email and phone support. We maintain your systems (uptime monitoring, security patches, updates). Monthly performance reports with chatbot analytics, appointment booking stats, and patient engagement metrics. Dedicated account manager for enterprise clients.",
+      "category": "Support",
+      "keywords": ["support", "help", "maintenance", "monitoring", "24/7"]
+    },
+    {
+      "id": "careers",
+      "question": "Are you hiring?",
+      "answer": "Yes! We're hiring Sales Growth Agents, AI engineers, software developers, and healthcare tech specialists. We offer remote-friendly, commission-based positions. Visit /careers.html to view open positions and apply online.",
+      "category": "Careers",
+      "keywords": ["hiring", "jobs", "careers", "employment"]
+    }
+  ],
+  "services": {
+    "physician-websites": {
+      "name": "Doctor & Physician Websites",
+      "description": "HIPAA-compliant websites optimized for patient acquisition and online appointment booking",
+      "features": ["SEO optimized for specialty", "Online appointment booking", "Patient intake forms", "Service descriptions", "Insurance info pages", "Mobile-responsive", "AI chatbot integration"],
+      "startingPrice": 2500
+    },
+    "appointment-chatbot": {
+      "name": "AI Appointment & Intake Chatbot",
+      "description": "24/7 chatbot for appointment scheduling, patient intake, and FAQ responses",
+      "features": ["Natural language understanding", "Appointment booking integration", "Patient intake collection", "Practice FAQ training", "Multi-platform (website/WhatsApp/SMS)", "Analytics dashboard", "60% reduction in no-shows"],
+      "startingPrice": 1500
+    },
+    "patient-portals": {
+      "name": "Secure Patient Portals",
+      "description": "HIPAA-compliant patient portals for records access, messaging, and appointment management",
+      "features": ["Medical records access", "Appointment management", "Prescription requests", "Secure messaging", "Patient payment processing", "EHR integration", "Audit logging"],
+      "startingPrice": 2000
+    },
+    "medical-seo": {
+      "name": "Medical Practice SEO",
+      "description": "Local SEO optimization for doctors and medical practices to be found by patients",
+      "features": ["Local search optimization", "Google My Business management", "Medical citations", "Reputation management", "Keyword research by specialty", "Content strategy", "Conversion optimization"],
+      "startingPrice": 1200
+    }
+  }
+}
