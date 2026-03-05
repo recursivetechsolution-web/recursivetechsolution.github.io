@@ -8,6 +8,8 @@ let conversationHistory = [];
 // inject this value from a server endpoint or build process (e.g. set a meta tag or
 // assign window.GROQ_API_KEY in a server-rendered template).
 // The fallback here is only for local development.
+// Production: Groq API calls are proxied through Firebase Cloud Function
+const GROQ_PROXY_URL = 'https://us-central1-recursivetech-c1bd9.cloudfunctions.net/groqChat';
 const GROQ_API_KEY =
     // try a global injected value first
     (window && window.GROQ_API_KEY) ||
@@ -262,11 +264,10 @@ Keep responses under 200 words. Be friendly and professional.`;
         console.log('📣 callGroqAPI invoked', { userMessage });
         console.log('🔑 GROQ_API_KEY (partial):', GROQ_API_KEY ? GROQ_API_KEY.slice(0, 8) + '…' : '<<none>>');
 
-        const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        const response = await fetch(GROQ_PROXY_URL, {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${GROQ_API_KEY}`,
-                'Content-Type': 'application/json'
+                                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 model: 'mixtral-8x7b-32768',
