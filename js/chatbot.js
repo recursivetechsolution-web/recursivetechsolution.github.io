@@ -4,7 +4,16 @@
 
 let faqData = [];
 let conversationHistory = [];
-const GROQ_API_KEY = 'YOUR_GROQ_API_KEY_HERE'; // Demo key - use env variable in production
+// GROQ API key should never be checked in to source control. In a real deployment you would
+// inject this value from a server endpoint or build process (e.g. set a meta tag or
+// assign window.GROQ_API_KEY in a server-rendered template).
+// The fallback here is only for local development.
+const GROQ_API_KEY =
+    // try a global injected value first
+    (window && window.GROQ_API_KEY) ||
+    // or read from a meta tag if you prefer
+    (document.querySelector('meta[name="groq-api-key"]') || {}).content ||
+    'Dgsk_E26GZOwMjGRzzIU1CLRTWGdyb3FYxQ6Ll0aGFKeSjSOGb065a95B';
 
 // Initialize chatbot
 async function initializeChatbot() {
@@ -88,7 +97,11 @@ async function getAIResponse(userMessage) {
             return escalationResponse;
         }
 
-        // Step 1: Check RAG database (local knowledge base)
+        // Step 0: Check for small talk / conversational messages
+  const smallTalkReply = checkSmallTalk(userMessage);
+  if (smallTalkReply) return smallTalkReply;
+
+  // Step 1: Check RAG database (local knowledge base)
         const ragResponse = searchRAG(userMessage);
         if (ragResponse) {
             console.log('RAG match found');
@@ -135,6 +148,54 @@ What would you like help with?`;
     }
 
     return null;
+}
+
+
+// Small talk / conversational handler
+function checkSmallTalk(message) {
+  const msg = message.toLowerCase().trim();
+
+  // Greetings
+  if (/^(hi|hello|hey|howdy|hiya|sup|what's up|whats up|yo)(\s|!|$)/.test(msg)) {
+    const greetings = [
+      "Hey there! I'm the Recursive Tech AI assistant. How can I help you today? I can answer questions about our services, pricing, or anything else.",
+      "Hello! Welcome to Recursive Tech. What can I help you with today?",
+      "Hi! Great to see you. I'm here to help with any questions about our AI and technology solutions."
+    ];
+    return greetings[Math.floor(Math.random() * greetings.length)];
+  }
+
+  // How are you
+  if (/how are you|how's it going|how do you do|you doing|you good/.test(msg)) {
+    return "I'm doing great, thanks for asking! I'm always ready to help. What can I do for you today?";
+  }
+
+  // What are you / who are you
+  if (/who are you|what are you|tell me about yourself|introduce yourself/.test(msg)) {
+    return "I'm the Recursive Tech AI assistant, powered by RAG (Retrieval-Augmented Generation) and Groq. I can help answer questions about our services, pricing, healthcare tech solutions, and more. What would you like to know?";
+  }
+
+  // Thank you
+  if (/^(thanks|thank you|thank u|thx|ty|cheers)(\s|!|$)/.test(msg)) {
+    return "You're welcome! Is there anything else I can help you with?";
+  }
+
+  // Goodbye
+  if (/^(bye|goodbye|see you|see ya|cya|later|good night|goodnight)(\s|!|$)/.test(msg)) {
+    return "Goodbye! Feel free to reach out anytime. Have a great day!";
+  }
+
+  // What can you do
+  if (/what can you do|help me|what do you know|capabilities|how can you help/.test(msg)) {
+    return "I can help you with:\n\n- **Our Services**: Web development, AI chatbots, patient portals\n- **Pricing**: Get quotes for any of our solutions\n- **Technical Details**: HIPAA compliance, integrations, features\n- **Contact Info**: Connect you with our team\n\nWhat would you like to know more about?";
+  }
+
+  // Okay / sounds good / got it
+  if (/^(ok|okay|sounds good|got it|alright|sure|cool|great|awesome|nice)(\s|!|.|$)/.test(msg)) {
+    return "Great! Let me know if you have any other questions or if there's anything specific I can help you with.";
+  }
+
+  return null; // Not small talk
 }
 
 // RAG: Search local knowledge base
@@ -197,6 +258,10 @@ For questions about our services, mention specific features or benefits. For con
 For questions outside your scope, suggest contacting recursivetechsolution@gmail.com or calling +1-443-741-2138.
 Keep responses under 200 words. Be friendly and professional.`;
 
+        // diagnostic logging for troubleshooting
+        console.log('📣 callGroqAPI invoked', { userMessage });
+        console.log('🔑 GROQ_API_KEY (partial):', GROQ_API_KEY ? GROQ_API_KEY.slice(0, 8) + '…' : '<<none>>');
+
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
             method: 'POST',
             headers: {
@@ -216,12 +281,15 @@ Keep responses under 200 words. Be friendly and professional.`;
             })
         });
 
+        console.log('📡 Groq API response status', response.status);
         if (!response.ok) {
-            console.error('Groq API error:', response.status);
+            const text = await response.text();
+            console.error('📛 Groq API error body', text);
             throw new Error(`API error: ${response.status}`);
         }
 
         const data = await response.json();
+        console.log('✅ Groq API returned', data);
         return data.choices[0].message.content;
 
     } catch (error) {
@@ -311,6 +379,7 @@ function trackChatEvent(eventName) {
         gtag('event', 'chat_' + eventName);
     }
 }
+80
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', initializeChatbot);

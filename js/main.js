@@ -2,11 +2,26 @@
 // GLOBAL FUNCTIONS & UTILITIES
 // ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
+// helper that runs a function when the document is ready (handles cases where the script
+// is loaded before or after DOMContentLoaded).
+function onReady(fn) {
+    if (document.readyState !== 'loading') {
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+
+onReady(function() {
     initializeSmoothScroll();
     initializeMobileNav();
-    initializeChatbot();
+    initializeChatWidget(); // renamed to avoid collision with chatbot.js
 });
+
+// also in case someone loads this script after the event, make sure nav is still initialized
+if (document.readyState !== 'loading') {
+    initializeMobileNav();
+}
 
 // Smooth scrolling for internal anchors
 function initializeSmoothScroll() {
@@ -31,9 +46,12 @@ function initializeMobileNav() {
 
     if (!navToggle || !navLinks) return;
 
-    navToggle.addEventListener('click', function () {
+    // toggle menu open/close
+    navToggle.addEventListener('click', function (e) {
+        // prevent the document listener from immediately closing it
+        e.stopPropagation();
         const isOpen = navLinks.classList.toggle('open');
-        navToggle.setAttribute('aria-expanded', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     // Close mobile nav when a link is clicked
@@ -44,7 +62,7 @@ function initializeMobileNav() {
         });
     });
 
-    // Close nav when clicking outside
+    // Close nav when clicking outside (but ignore clicks on the toggle itself)
     document.addEventListener('click', function(event) {
         if (!navToggle.contains(event.target) && !navLinks.contains(event.target)) {
             navLinks.classList.remove('open');
@@ -53,9 +71,29 @@ function initializeMobileNav() {
     });
 }
 
-// Chatbot widget toggle functionality
-function initializeChatbot() {
-    // Create floating widget button if chatbot widget exists
+// Chatbot widget toggle functionality (name changed to prevent overwrite)
+function initializeChatWidget() {
+    // ensure we have a widget container even if none is written into the HTML
+    if (!document.getElementById('chatbot-widget')) {
+        // minimal markup so the floating button can open something
+        const widget = document.createElement('div');
+        widget.id = 'chatbot-widget';
+        widget.style.display = 'none';
+        widget.innerHTML = `
+            <div class="chat-header">
+                <span>Need Website Help?</span>
+                <button id="close-chat">×</button>
+            </div>
+            <div id="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="chat-input" placeholder="Ask anything...">
+                <button id="send-chat">Send</button>
+            </div>
+        `;
+        document.body.appendChild(widget);
+    }
+
+    // Create floating widget button now that we know widget exists
     createFloatingWidgetButton();
 
     const chatWidget = document.getElementById('chatbot-widget');
@@ -80,6 +118,7 @@ function createFloatingWidgetButton() {
     // Don't create if already exists
     if (document.getElementById('floating-chat-button')) return;
 
+    console.log('🔘 creating floating chat button');
     const button = document.createElement('button');
     button.id = 'floating-chat-button';
     button.innerHTML = '💬 Chat';
