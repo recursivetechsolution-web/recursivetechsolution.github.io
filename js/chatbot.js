@@ -9,7 +9,7 @@ let conversationHistory = [];
 // assign window.GROQ_API_KEY in a server-rendered template).
 // The fallback here is only for local development.
 // Production: Groq API calls are proxied through Firebase Cloud Function
-const GROQ_PROXY_URL = 'https://us-central1-recursivetech-c1bd9.cloudfunctions.net/groqChat';
+const GROQ_PROXY_URL = 'https://groq-proxy.recursivetechsolution.workers.dev';
 const GROQ_API_KEY =
     // try a global injected value first
     (window && window.GROQ_API_KEY) ||
