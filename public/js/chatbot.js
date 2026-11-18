@@ -9,13 +9,9 @@ let conversationHistory = [];
 // assign window.GROQ_API_KEY in a server-rendered template).
 // The fallback here is only for local development.
 // Production: Groq API calls are proxied through Firebase Cloud Function
-const GROQ_PROXY_URL = 'https://groq-proxy.recursivetechsolution.workers.dev';
-const GROQ_API_KEY =
-    // try a global injected value first
-    (window && window.GROQ_API_KEY) ||
-    // or read from a meta tag if you prefer
-    (document.querySelector('meta[name="groq-api-key"]') || {}).content ||
-    'Dgsk_E26GZOwMjGRzzIU1CLRTWGdyb3FYxQ6Ll0aGFKeSjSOGb065a95B';
+const GROQ_PROXY_URL = 'https://groq-proxy.recursivetech.workers.dev';
+// No API key in the browser: the Cloudflare Worker uses Cloudflare Workers AI.
+const GROQ_API_KEY = '';
 
 // Initialize chatbot
 async function initializeChatbot() {
@@ -262,7 +258,6 @@ Keep responses under 200 words. Be friendly and professional.`;
 
         // diagnostic logging for troubleshooting
         console.log('📣 callGroqAPI invoked', { userMessage });
-        console.log('🔑 GROQ_API_KEY (partial):', GROQ_API_KEY ? GROQ_API_KEY.slice(0, 8) + '…' : '<<none>>');
 
         const response = await fetch(GROQ_PROXY_URL, {
             method: 'POST',

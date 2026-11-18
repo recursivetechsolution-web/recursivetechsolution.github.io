@@ -1,6 +1,7 @@
-name = "groq-proxy"
+name = "groq-proxy" # kept so the URL stays groq-proxy.recursivetechsolution.workers.dev
 main = "worker.js"
-compatibility_date = "2024-01-01"
+compatibility_date = "2025-01-01"
 
-# After deploying, add your secret:
-# wrangler secret put GROQ_API_KEY
+# Cloudflare Workers AI (free daily allowance). No API key needed.
+[ai]
+binding = "AI"
